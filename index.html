@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Shooter Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+  <!-- Start Screen -->
+  <div id="startScreen" class="ui-panel">
+    <h1>🚀 My Shooter Game</h1>
+    <button id="startBtn">Start Game</button>
+  </div>
+
+  <!-- Upgrade Screen -->
+  <div id="upgradeScreen" class="ui-panel" style="display:none;">
+    <h2>Choose Upgrade</h2>
+    <div class="upgrade-list">
+      <button class="upgrade" data-upgrade="hp">❤️ +20 HP</button>
+      <button class="upgrade" data-upgrade="damage">💥 +2 Damage</button>
+      <button class="upgrade" data-upgrade="speed">⚡ +1 Speed</button>
+    </div>
+  </div>
+
+  <!-- Game Over / Win Screen -->
+  <div id="gameOverScreen" class="ui-panel" style="display:none;">
+    <h1 id="gameOverText"></h1>
+    <button id="restartBtn">Restart Level</button>
+    <button id="backBtn">Back to Start</button>
+  </div>
+
+  <!-- HUD -->
+  <div id="hud">
+    <span id="hpBar">HP: 100</span>
+    <span id="levelText">Level: 1</span>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
